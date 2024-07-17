@@ -27,13 +27,13 @@ Clone the lastest development version of DATTSS and change directory:
 python AFE_quan.py -b /path/to/allbamfiles.txt -anno /path/to/hg38_AFE_annotation.txt -p 10 -o /path/to/AFE_quan_output.txt
 ```
 
-* ```/path/to/allbamfiles.txt``` contains all input filenames (BAM format) of samples of interest. 
+ ```/path/to/allbamfiles.txt``` contains all input filenames (BAM format) of samples of interest. 
 The expected format is `,` to separate different files:
 ```
 /path/to/sample1.bam,/path/to/sample2.bam,/path/to/sample3.bam,/path/to/sampleN.bam
 ```
 
-* ```/path/to/hg38_AFE_annotation.txt``` contains first exon regions from protein-coding genes that are supported by CAGE peaks, which is built on hg38 genome version.*
+ ```/path/to/hg38_AFE_annotation.txt``` contains first exon regions from protein-coding genes that are supported by CAGE peaks, which is built on hg38 genome version.
 
 
 

@@ -49,6 +49,35 @@ The explanation of each column is as follows:
 
 
 
+## Compare alternative first exon usage between conditions
+
+***Step1: Detect and quantify alternative first exon events***
+
+
+```
+python AFE_compare.py -b /path/to/allbamfiles.txt -anno /path/to/hg38_AFE_annotation.txt -p 10 -o /path/to/AFE_quan_output.txt
+```
+
+allbamfiles.txt contains all filename of bamfile between two conditions, as shown below:
+
+```
+condition1=/path/to/ctrl1.bam,/path/to/ctrl2.bam 
+condition2=/path/to/case1.bam,/path/to/case2.bam
+```
+
+
+***Step2: Infer significantly dysregulated alternative first exons between conditions using DEXSeq model***
+
+We utilizes DEXSeq, the model for differential exon usage analysis based on standard RNA-seq data, to detect differential usage of alternative first exon. This statistical framework could account for biological variability between replicates and is robust to changes in isoform abundance between conditions.
+
+
+```
+Rscript Infer_DU_AFE.R -b /path/to/allbamfiles.txt -c /path/to/AFE_quan_output.txt -d /path/to/DEXSeq_count/ -o /path/to/AFE_DU.txt
+```
+ ```/path/to/DEXSeq_count/``` is a directory to be created, which is used to store count files for DEXSeq model. 
+
+Final results will be saved in the file ```AFE_DU.txt```.
+
 
 
 

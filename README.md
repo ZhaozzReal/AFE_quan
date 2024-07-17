@@ -7,8 +7,6 @@ DATTSS is developed for Dynamic analyses of Alternative Tandem TSS events from s
 
 ## Diagram illuminates the DATTSS algorithm
 
-![image](https://github.com/ZhaozzReal/DATTSS/blob/main/diagram.png)
-
 
 ## Installation
 
@@ -33,7 +31,24 @@ The expected format is `,` to separate different files:
 /path/to/sample1.bam,/path/to/sample2.bam,/path/to/sample3.bam,/path/to/sampleN.bam
 ```
 
- ```/path/to/hg38_AFE_annotation.txt``` contains first exon regions from protein-coding genes that are supported by CAGE peaks, which is built on hg38 genome version.
+ ```/path/to/hg38_AFE_annotation.txt``` contains non-redundant first exon regions from protein-coding genes that are supported by CAGE peaks, which is built on hg38 genome version.
+
+
+
+## Output
+
+In ```/path/to/AFE_quan_output.txt```, each row corresponds to one first exon region and its related features.
+
+The explanation of each column is as follows:
+ 
+ * genename: the HUGO gene symbol
+ * first_exon_region：the genomic region and strand information of first exon region ranging from transcription start site to first exon end
+ * sample1.bam：the expression level (junction count) of given FE in sample1
+ * sample2.bam：the expression level (junction count) of given FE in sample2
+ * sampleN.bam：the expression level (junction count) of given FE in sampleN
+
+
+
 
 
 

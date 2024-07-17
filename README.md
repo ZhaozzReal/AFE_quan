@@ -48,6 +48,8 @@ The explanation of each column is as follows:
  * sampleN.bam：the expression level (junction count) of given FE in sampleN
 
 
+<br/>
+<br/>
 
 ## Compare alternative first exon usage between conditions
 

@@ -51,7 +51,7 @@ The explanation of each column is as follows:
 
 ## Comparison of alternative first exon usage between conditions
 
-**Step1: Quantify first exon expression**
+**Step1: Quantify first exon expression across samples**
 
 
 ```
@@ -66,7 +66,7 @@ condition2=/path/to/case1.bam,/path/to/case2.bam
 ```
 
 
-**Step2: Infer significantly dysregulated alternative first exons between conditions**
+**Step2: Infer significantly dysregulated alternative first exon usage between conditions**
 
 We utilizes DEXSeq, the model for differential exon usage analysis based on standard RNA-seq data, to detect differential usage of alternative first exon.
 
@@ -81,7 +81,7 @@ Final results will be saved in the file ```AFE_DU.txt```.
 
 ## Citation
 
-*Please cite the following article if you use DATTSS in your research:*
+*Please cite the following article if you use this program in your research:*
 
 * Zhao Z, Chen Y, Zou X, Lin L, Zhou X, Cheng X, Yang G, Xu Q, Gong L, Li L, Ni T. Pan-cancer transcriptome analysis reveals widespread regulation through alternative tandem transcription initiation. Sci Adv. 2024 Jul 12;10(28):eadl5606. PMID: 38985880.
 

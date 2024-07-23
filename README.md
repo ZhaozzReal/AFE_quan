@@ -74,7 +74,7 @@ We utilizes DEXSeq, the model for differential exon usage analysis based on stan
 ```
 Rscript Infer_DU_AFE.R -b /path/to/allbamfiles.txt -c /path/to/AFE_quan_output.txt -d /path/to/DEXSeq_count/ -o /path/to/AFE_DU.txt
 ```
- ```/path/to/DEXSeq_count/``` is a directory to be created, which is used to store count files for DEXSeq model. 
+ ```/path/to/DEXSeq_count/``` is a directory to be created, which is used to store FE expression count files for DEXSeq model. 
 
 Final results will be saved in the file ```AFE_DU.txt```.
 

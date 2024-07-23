@@ -5,6 +5,11 @@
 The program is inspired by proActiv software, which estimates promoter activity by counting junction reads aligning to the set of first introns belonging to the transcripts of given promoter from standard RNA-seq. Here, we focus on **GENCODE-annotated first exons of protein-coding genes that are supported by CAGE peaks**, further increasing the reliability of quantification. The fast calculation speed of this program is friendly to population-level quantification of first exon activity, which could be applied in RNA-seq data from TCGA and GTEx project.
 
 
+## Diagram illuminates the quantification of first exon activity
+
+![image](https://github.com/ZhaozzReal/AFE_quan/blob/main/AFE.png)
+
+
 
 ## Installation
 

@@ -2,8 +2,7 @@
 
 ## Description
 
-The program is inspired by proActiv software, which estimates promoter activity by counting junction reads aligning to the set of first introns belonging to the transcripts of given promoter from standard RNA-seq. Here, we focus on **GENCODE-annotated first exons that are supported by CAGE peaks**, further increasing the reliability of quantification. 
-The fast calculation speed of this program is friendly to population-level quantification of first exon activity, which could be applied in RNA-seq data from TCGA and GTEx project.
+The program is inspired by proActiv software, which estimates promoter activity by counting junction reads aligning to the set of first introns belonging to the transcripts of given promoter from standard RNA-seq. Here, we focus on **GENCODE-annotated first exons of protein-coding genes that are supported by CAGE peaks**, further increasing the reliability of quantification. The fast calculation speed of this program is friendly to population-level quantification of first exon activity, which could be applied in RNA-seq data from TCGA and GTEx project.
 
 
 
@@ -50,9 +49,9 @@ The explanation of each column is as follows:
 <br/>
 <br/>
 
-## Compare alternative first exon usage between conditions
+## Comparison of alternative first exon usage between conditions
 
-***Step1: Detect and quantify alternative first exon events***
+**Step1: Quantify first exon expression**
 
 
 ```
@@ -67,7 +66,7 @@ condition2=/path/to/case1.bam,/path/to/case2.bam
 ```
 
 
-***Step2: Infer significantly dysregulated alternative first exons between conditions using DEXSeq model***
+**Step2: Infer significantly dysregulated alternative first exons between conditions**
 
 We utilizes DEXSeq, the model for differential exon usage analysis based on standard RNA-seq data, to detect differential usage of alternative first exon.
 

@@ -8,9 +8,9 @@ The program is inspired by proActiv software, which estimates promoter activity 
 
 ## Installation
 
-The program is built on Python, which requires packages ```HTSeq```, ```collections```, ```multiprocessing``` and ```argparse```.
+The program is built on Python and R, which requires packages ```HTSeq```, ```collections```, ```multiprocessing```, ```argparse``` and libraries ```optparse```, ```DEXSeq```, ```dplyr```, ```stringr```, ```data.table```, ```plyr```.
 
-Clone the lastest development version of DATTSS and change directory:
+Clone the lastest development version of this program and change directory:
 
 ```
   git clone https://github.com/ZhaozzReal/AFE_quan.git

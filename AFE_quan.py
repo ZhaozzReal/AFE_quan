@@ -40,10 +40,10 @@ def AFE_main(anno_txt,bamfile_txt,processors,outfile):
     bamnames = [ i.split("/")[-1] for i in bamfiles]
     out = open(outfile,"w")
     out.write("{}\t{}\t{}\n".format("genename","first_exon_region","\t".join(bamnames)))
+    pool = Pool(processors)
     for line in open(anno_txt,"r"):
         SYMBOL,first_exon,strand = line.strip().split("\t")
         exon_bamfiles_list = list(zip([line.strip()]*len(bamfiles),bamfiles))
-        pool = Pool(processors)
         num_list = pool.map(Get_junction_num,exon_bamfiles_list)
         out.write("{}\t{}\t{}\n".format(SYMBOL,first_exon + "_" + strand,"\t".join(list(map(str,num_list)))))
     out.close()

@@ -48,10 +48,10 @@ def Get_junction_num(input_tuple):
 def AFE_main(anno_txt,all_bamfiles,processors,outfile):
     out = open(outfile,"w")
     out.write("{}\t{}\t{}\n".format("genename","first_exon_region","\t".join(all_bamfiles)))
+    pool = Pool(processors)
     for line in open(anno_txt,"r"):
         SYMBOL,first_exon,strand = line.strip().split("\t")
         exon_bamfiles_list = list(zip([line.strip()]*len(all_bamfiles),all_bamfiles))
-        pool = Pool(processors)
         num_list = pool.map(Get_junction_num,exon_bamfiles_list)
         out.write("{}\t{}\t{}\n".format(SYMBOL,first_exon + "_" + strand,"\t".join(list(map(str,num_list)))))
     out.close()
